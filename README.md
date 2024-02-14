@@ -4,10 +4,10 @@ The goal if this application is to showcase a real-world scenario of an applicat
 
 Using the following aspects of Prisma
 
-Data modeling
-CRUD
-Aggregations
-API layer
+//Data modeling
+//CRUD
+//Aggregations
+//API layer
 Validation
 Testing
 Authentication
