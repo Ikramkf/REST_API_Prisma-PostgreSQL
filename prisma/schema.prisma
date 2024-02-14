@@ -11,14 +11,35 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String @unique
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
   firstName String
-  lastName String
-  social Json?
+  lastName  String
+  social    Json?
+  courses   Course[]
 }
 
-model Course{
-  id Int @id @default(autoincrement())
+model Course {
+  id           Int    @id @default(autoincrement())
+  name         String
+  coursDetails String
+  members      User[]
+}
 
+model Test {
+  id        Int      @id @default(autoincrement())
+  updatedAt DateTime @updatedAt
+  name      String
+  date      DateTime
+}
+
+model testResult {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  result    Int
+}
+
+model CourseEnrollement{
+  createdAt DateTime @default(now())
+  role String User
 }
